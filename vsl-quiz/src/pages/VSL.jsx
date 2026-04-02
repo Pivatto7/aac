@@ -1,6 +1,8 @@
 import React from 'react';
 import { PlayCircle, ShieldCheck, Check, TrendingUp, Key, Zap, MessageSquareWarning } from 'lucide-react';
 import '../styles/VSL.css';
+import basicImage from '../assets/basic.jpg';
+import proImage from '../assets/pro.jpg';
 
 export default function VSL() {
   const ctaText = "Quero destravar minha confiança agora";
@@ -100,14 +102,15 @@ export default function VSL() {
       <section id="pricing" className="pricing-section">
         <h2 className="section-title" style={{ marginBottom: '1rem' }}>Escolha o seu plano</h2>
         <div className="pricing-grid">
-          
+
           {/* Basic Plan */}
           <div className="pricing-card">
+            <img src={basicImage} alt="Mockup do Guia O Que Falar" style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover', borderRadius: '8px', marginBottom: '1.5rem', border: '1px solid var(--surface-border)' }} />
             <h3 className="plan-name">Plano Básico</h3>
             <div className="plan-price">
               <span className="price-currency">R$</span>
               <span>27</span>
-              <span className="price-currency" style={{marginTop: 'auto', marginBottom: '0.5rem', marginLeft: '2px'}}>,00</span>
+              <span className="price-currency" style={{ marginTop: 'auto', marginBottom: '0.5rem', marginLeft: '2px' }}>,00</span>
             </div>
             <ul className="plan-features">
               {basicFeatures.map((feat, i) => (
@@ -125,17 +128,20 @@ export default function VSL() {
           {/* Pro Plan */}
           <div className="pricing-card pro">
             <div className="popular-badge">Mais Escolhido</div>
-            <h3 className="plan-name">Plano PRO <span style={{color: 'var(--primary-red)'}}>+ Bônus Vip</span></h3>
+            <img src={proImage} alt="Mockups de todos os bônus exclusivos" style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover', borderRadius: '8px', marginBottom: '1.5rem', marginTop: '0.5rem', border: '1px solid var(--primary-red)' }} />
+            <h3 className="plan-name">Plano PRO <span style={{ color: 'var(--primary-red)' }}>+ Bônus Vip</span></h3>
+            <div style={{ textDecoration: 'line-through', color: 'var(--primary-red)', fontSize: '1.1rem', opacity: 0.8, marginTop: '0.5rem' }}>De R$ 197,00</div>
+            <div style={{ color: 'var(--text-muted)', fontSize: '1rem', marginTop: '0.2rem', marginBottom: '0' }}>Por apenas:</div>
             <div className="plan-price">
               <span className="price-currency">R$</span>
               <span>47</span>
-              <span className="price-currency" style={{marginTop: 'auto', marginBottom: '0.5rem', marginLeft: '2px'}}>,00</span>
+              <span className="price-currency" style={{ marginTop: 'auto', marginBottom: '0.5rem', marginLeft: '2px' }}>,00</span>
             </div>
             <ul className="plan-features">
               {proFeatures.map((feat, i) => (
                 <li key={`pro-${i}`} className="feature-item">
                   <Check size={18} color="var(--primary-red)" style={{ flexShrink: 0 }} />
-                  <span style={i === 0 ? {fontWeight: 'bold'} : {}}>{feat}</span>
+                  <span style={i === 0 ? { fontWeight: 'bold' } : {}}>{feat}</span>
                 </li>
               ))}
               <div style={{ height: '1px', backgroundColor: 'var(--surface-border)', margin: '1rem 0' }}></div>
@@ -162,11 +168,11 @@ export default function VSL() {
           <p>Seja por qualquer motivo, se você não sentir sua confiança disparar, basta um e-mail para ter 100% do seu dinheiro de volta. Você não corre nenhum risco.</p>
         </div>
       </section>
-      
+
       <div className="buy-button-wrapper" style={{ marginBottom: '5rem' }}>
-          <button onClick={scrollToPricing} className="buy-button" style={{ maxWidth: '800px' }}>
-            {ctaText} <Zap size={20} />
-          </button>
+        <button onClick={scrollToPricing} className="buy-button" style={{ maxWidth: '800px' }}>
+          {ctaText} <Zap size={20} />
+        </button>
       </div>
 
     </div>
