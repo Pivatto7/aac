@@ -133,7 +133,7 @@ export default function VSL() {
               ))}
             </ul>
             <button onClick={() => window.location.href = 'https://ggcheckout.app/checkout/v5/2OFxJPywnmdIHXBqAep1'} className="buy-button" style={{ fontSize: '1rem', padding: '1rem' }}>
-              Finalizar Compra
+              ESCOLHER PLANO
             </button>
           </div>
 
@@ -166,7 +166,7 @@ export default function VSL() {
               ))}
             </ul>
             <button onClick={() => window.location.href = 'https://ggcheckout.app/checkout/v5/KBJkmfI8656y3k7xaNAa'} className="buy-button" style={{ fontSize: '1.2rem', padding: '1.2rem' }}>
-              Quero o PRO Agora
+              ESCOLHER PLANO
             </button>
           </div>
 
