@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { PlayCircle, ShieldCheck, Check, TrendingUp, Key, Zap, MessageSquareWarning } from 'lucide-react';
 import '../styles/VSL.css';
 import basicImage from '../assets/basic.jpg';
 import proImage from '../assets/pro.jpg';
 
 export default function VSL() {
+  useEffect(() => {
+    const s = document.createElement("script");
+    s.src = "https://scripts.converteai.net/7f6a95c8-9d58-4683-95f9-5644ba159913/players/69d158cdc5b65f18922e9aab/v4/player.js";
+    s.async = true;
+    document.head.appendChild(s);
+  }, []);
+
   const ctaText = "Quero destravar minha confiança agora";
 
   const basicFeatures = [
@@ -46,18 +53,11 @@ export default function VSL() {
     <div className="vsl-page">
       <section className="hero-section">
         <h1 className="headline">
-          Como eliminar de vez a <span className="headline-highlight">sensação de ser ignorado</span> e destravar conversas com mulheres muito acima da média
+          Como parar de ser <span className="headline-highlight">ignorado</span> e chegar em mulheres acima da média
         </h1>
-        <p className="subheadline">
-          Descubra o método simples para acabar com a baixa autoestima e voltar a ter o controle, mesmo que hoje você ache que nunca vai ter chance por causa da aparência.
-        </p>
 
         <div className="video-container">
-          <div className="video-placeholder">
-            <PlayCircle size={64} style={{ opacity: 0.5 }} />
-            <p>Seu Vídeo VSL Fica Aqui</p>
-            <span style={{ fontSize: '0.8rem', opacity: 0.5 }}>(Revele que o problema não é aparência, quebre a crença e mostre o método)</span>
-          </div>
+          <vturb-smartplayer id="vid-69d158cdc5b65f18922e9aab" style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: '400px' }}></vturb-smartplayer>
         </div>
 
         <div className="buy-button-wrapper">
@@ -120,7 +120,7 @@ export default function VSL() {
                 </li>
               ))}
             </ul>
-            <button className="buy-button" style={{ fontSize: '1rem', padding: '1rem' }}>
+            <button onClick={() => window.location.href = 'https://ggcheckout.app/checkout/v5/2OFxJPywnmdIHXBqAep1'} className="buy-button" style={{ fontSize: '1rem', padding: '1rem' }}>
               Finalizar Compra
             </button>
           </div>
@@ -153,7 +153,7 @@ export default function VSL() {
                 </li>
               ))}
             </ul>
-            <button className="buy-button" style={{ fontSize: '1.2rem', padding: '1.2rem' }}>
+            <button onClick={() => window.location.href = 'https://ggcheckout.app/checkout/v5/KBJkmfI8656y3k7xaNAa'} className="buy-button" style={{ fontSize: '1.2rem', padding: '1.2rem' }}>
               Quero o PRO Agora
             </button>
           </div>
