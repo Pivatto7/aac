@@ -1,15 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { PlayCircle, ShieldCheck, Check, TrendingUp, Key, Zap, MessageSquareWarning } from 'lucide-react';
 import '../styles/VSL.css';
 import basicImage from '../assets/basic.jpg';
 import proImage from '../assets/pro.jpg';
 
 export default function VSL() {
+  const [showPitch, setShowPitch] = useState(false);
+
   useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPitch(true);
+    }, 208000); // 3:28 min em ms
+
     const s = document.createElement("script");
     s.src = "https://scripts.converteai.net/7f6a95c8-9d58-4683-95f9-5644ba159913/players/69d158cdc5b65f18922e9aab/v4/player.js";
     s.async = true;
     document.head.appendChild(s);
+
+    return () => clearTimeout(timer);
   }, []);
 
   const ctaText = "Quero destravar minha confiança agora";
@@ -60,14 +68,18 @@ export default function VSL() {
           <vturb-smartplayer id="vid-69d158cdc5b65f18922e9aab" style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: '400px' }}></vturb-smartplayer>
         </div>
 
-        <div className="buy-button-wrapper">
-          <button onClick={scrollToPricing} className="buy-button">
-            {ctaText} <Zap size={20} />
-          </button>
-        </div>
+        {showPitch && (
+          <div className="buy-button-wrapper">
+            <button onClick={scrollToPricing} className="buy-button">
+              {ctaText} <Zap size={20} />
+            </button>
+          </div>
+        )}
       </section>
 
-      <section className="benefits-section">
+      {showPitch && (
+        <>
+          <section className="benefits-section">
         <div className="benefits-container">
           <h2 className="section-title">O Que Você Vai Aprender Hoje:</h2>
           <div className="benefits-list">
@@ -174,6 +186,8 @@ export default function VSL() {
           {ctaText} <Zap size={20} />
         </button>
       </div>
+        </>
+      )}
 
     </div>
   );
