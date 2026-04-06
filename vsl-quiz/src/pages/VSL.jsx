@@ -121,8 +121,8 @@ export default function VSL() {
             <h3 className="plan-name">Plano Básico</h3>
             <div className="plan-price">
               <span className="price-currency">R$</span>
-              <span>27</span>
-              <span className="price-currency" style={{ marginTop: 'auto', marginBottom: '0.5rem', marginLeft: '2px' }}>,00</span>
+              <span>19</span>
+              <span className="price-currency" style={{ marginTop: 'auto', marginBottom: '0.5rem', marginLeft: '2px' }}>,90</span>
             </div>
             <ul className="plan-features">
               {basicFeatures.map((feat, i) => (
@@ -132,9 +132,9 @@ export default function VSL() {
                 </li>
               ))}
             </ul>
-            <button onClick={() => window.location.href = 'https://ggcheckout.app/checkout/v5/2OFxJPywnmdIHXBqAep1'} className="buy-button" style={{ fontSize: '1rem', padding: '1rem' }}>
+            <a href="https://ggcheckout.app/checkout/v5/2OFxJPywnmdIHXBqAep1" className="buy-button" style={{ fontSize: '1rem', padding: '1rem', textDecoration: 'none' }}>
               ESCOLHER PLANO
-            </button>
+            </a>
           </div>
 
           {/* Pro Plan */}
@@ -146,8 +146,8 @@ export default function VSL() {
             <div style={{ color: 'var(--text-muted)', fontSize: '1rem', marginTop: '0.2rem', marginBottom: '0' }}>Por apenas:</div>
             <div className="plan-price">
               <span className="price-currency">R$</span>
-              <span>47</span>
-              <span className="price-currency" style={{ marginTop: 'auto', marginBottom: '0.5rem', marginLeft: '2px' }}>,00</span>
+              <span>25</span>
+              <span className="price-currency" style={{ marginTop: 'auto', marginBottom: '0.5rem', marginLeft: '2px' }}>,90</span>
             </div>
             <ul className="plan-features">
               {proFeatures.map((feat, i) => (
@@ -165,9 +165,9 @@ export default function VSL() {
                 </li>
               ))}
             </ul>
-            <button onClick={() => window.location.href = 'https://ggcheckout.app/checkout/v5/KBJkmfI8656y3k7xaNAa'} className="buy-button" style={{ fontSize: '1.2rem', padding: '1.2rem' }}>
+            <a href="https://ggcheckout.app/checkout/v5/KBJkmfI8656y3k7xaNAa" className="buy-button" style={{ fontSize: '1.2rem', padding: '1.2rem', textDecoration: 'none' }}>
               ESCOLHER PLANO
-            </button>
+            </a>
           </div>
 
         </div>
