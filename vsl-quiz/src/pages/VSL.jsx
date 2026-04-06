@@ -132,7 +132,7 @@ export default function VSL() {
                 </li>
               ))}
             </ul>
-            <a href="https://ggcheckout.app/checkout/v5/2OFxJPywnmdIHXBqAep1" className="buy-button" style={{ fontSize: '1rem', padding: '1rem', textDecoration: 'none' }}>
+            <a href={`https://ggcheckout.app/checkout/v5/2OFxJPywnmdIHXBqAep1${window.location.search}`} className="buy-button" style={{ fontSize: '1rem', padding: '1rem', textDecoration: 'none' }}>
               ESCOLHER PLANO
             </a>
           </div>
@@ -165,7 +165,7 @@ export default function VSL() {
                 </li>
               ))}
             </ul>
-            <a href="https://ggcheckout.app/checkout/v5/KBJkmfI8656y3k7xaNAa" className="buy-button" style={{ fontSize: '1.2rem', padding: '1.2rem', textDecoration: 'none' }}>
+            <a href={`https://ggcheckout.app/checkout/v5/KBJkmfI8656y3k7xaNAa${window.location.search}`} className="buy-button" style={{ fontSize: '1.2rem', padding: '1.2rem', textDecoration: 'none' }}>
               ESCOLHER PLANO
             </a>
           </div>
