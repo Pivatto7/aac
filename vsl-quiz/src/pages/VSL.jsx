@@ -10,10 +10,10 @@ export default function VSL() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPitch(true);
-    }, 208000); // 3:28 min em ms
+    }, 175000); // 2:55 min em ms
 
     const s = document.createElement("script");
-    s.src = "https://scripts.converteai.net/7f6a95c8-9d58-4683-95f9-5644ba159913/players/69d158cdc5b65f18922e9aab/v4/player.js";
+    s.src = "https://scripts.converteai.net/7f6a95c8-9d58-4683-95f9-5644ba159913/players/69d42045ba8431ee2bd74898/v4/player.js";
     s.async = true;
     document.head.appendChild(s);
 
@@ -65,7 +65,7 @@ export default function VSL() {
         </h1>
 
         <div className="video-container">
-          <vturb-smartplayer id="vid-69d158cdc5b65f18922e9aab" style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: '400px' }}></vturb-smartplayer>
+          <vturb-smartplayer id="vid-69d42045ba8431ee2bd74898" style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: '400px' }}></vturb-smartplayer>
         </div>
 
         {showPitch && (
