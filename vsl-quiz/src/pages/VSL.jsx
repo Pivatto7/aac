@@ -4,13 +4,19 @@ import '../styles/VSL.css';
 import proImage from '../assets/pro.png';
 
 export default function VSL() {
-  const [showPitch, setShowPitch] = useState(true);
+  const [showPitch, setShowPitch] = useState(false);
 
   useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPitch(true);
+    }, 170000); // 2:50 min em ms
+
     const s = document.createElement("script");
     s.src = "https://scripts.converteai.net/7f6a95c8-9d58-4683-95f9-5644ba159913/players/69d58fb384e8b7c7228550d4/v4/player.js";
     s.async = true;
     document.head.appendChild(s);
+
+    return () => clearTimeout(timer);
   }, []);
 
   const ctaText = "Quiero desbloquear mi confianza ahora";
