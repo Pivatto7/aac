@@ -5,48 +5,48 @@ import '../styles/Quiz.css';
 
 const questions = [
   {
-    question: "Qual é o seu maior obstáculo na hora de se relacionar com uma mulher atraente?",
+    question: "¿Cuál es tu mayor obstáculo a la hora de relacionarte con una mujer atractiva?",
     options: [
-      "Travar completamente antes de chegar nela.",
-      "Não saber o que falar pra manter a conversa.",
-      "Tomar vácuo no WhatsApp logo nos primeiros dias.",
-      "Sentir que não sou bonito ou rico o suficiente."
+      "Quedarme completamente en blanco antes de acercarme a ella.",
+      "No saber qué decir para mantener la conversación.",
+      "Ser ignorado en WhatsApp en los primeros días.",
+      "Sentir que no soy lo suficientemente guapo o rico."
     ]
   },
   {
-    question: "Quando você tenta puxar assunto no Instagram ou WhatsApp, o que costuma acontecer?",
+    question: "Cuando intentas iniciar una conversación en Instagram o WhatsApp, ¿qué suele pasar?",
     options: [
-      "Ela responde com 'kkk' ou respostas muito curtas.",
-      "Visualiza e não responde (o famoso vácuo).",
-      "A conversa morre muito rápido, sempre.",
-      "Eu nem tento porque acho que vou ser ignorado."
+      "Ella responde con 'jaja' o respuestas muy cortas.",
+      "Me deja en visto y no responde.",
+      "La conversación muere muy rápido, siempre.",
+      "Ni siquiera lo intento porque creo que me ignorará."
     ]
   },
   {
-    question: "Qual destas opções descreve melhor o seu sentimento quando vê um cara comum com uma mulher muito acima da média?",
+    question: "¿Cuál de estas opciones describe mejor cómo te sientes cuando ves a un chico común con una mujer muy por encima de la media?",
     options: [
-      "Fico frustrado porque eu poderia ser aquele cara.",
-      "Me sinto mal por não ter a mesma coragem.",
-      "Acho que ele deve ter muito dinheiro.",
-      "Não ligo, mas queria ter a mesma lábia."
+      "Me frustro porque yo podría ser ese chico.",
+      "Me siento mal por no tener el mismo valor.",
+      "Creo que debe tener mucho dinero.",
+      "No me importa, pero me gustaría tener su labia."
     ]
   },
   {
-    question: "O que passa na sua cabeça quando você pensa em abordar uma mulher muito gata?",
+    question: "¿Qué pasa por tu cabeza cuando piensas en abordar a una mujer muy atractiva?",
     options: [
-      "'Ela vai me esnobar e me fazer passar vergonha'.",
-      "'O que eu vou falar que não seja clichê?'",
-      "'Sou feio/baixo/magro demais pra ela'.",
-      "'Melhor ficar na minha e evitar a rejeição'."
+      "'Me va a rechazar y me hará pasar vergüenza'.",
+      "'¿Qué le digo que no sea un cliché?'",
+      "'Soy demasiado feo/bajo/flaco para ella'.",
+      "'Mejor me quedo tranquilo y evito el rechazo'."
     ]
   },
   {
-    question: "Se você pudesse resolver apenas UM problema hoje, qual seria?",
+    question: "Si pudieras resolver solo UN problema hoy, ¿cuál sería?",
     options: [
-      "Perder o medo e ganhar atitude inabalável.",
-      "Ter um arsenal de mensagens prontas para ela responder na hora.",
-      "Ter um passo a passo do que falar pessoalmente.",
-      "Entender definitivamente como se tornar atraente."
+      "Perder el miedo y tener una actitud inquebrantable.",
+      "Tener un arsenal de mensajes listos para que responda de inmediato.",
+      "Tener un paso a paso de qué decirle en persona.",
+      "Entender de una vez por todas cómo hacerme atractivo."
     ]
   }
 ];
@@ -83,7 +83,7 @@ export default function Quiz() {
       <div className="quiz-container">
         <div className="quiz-content" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <div className="loading-spinner"></div>
-          <h2 className="loading-text">Analisando seus padrões de comportamento...</h2>
+          <h2 className="loading-text">Analizando tus patrones de comportamiento...</h2>
         </div>
       </div>
     );
@@ -94,16 +94,16 @@ export default function Quiz() {
       <div className="quiz-container">
         <div className="quiz-content" style={{ textAlign: 'center' }}>
           <h1 className="diagnostic-title">
-            Seu problema <span className="diagnostic-highlight">não é aparência...</span>
+            Tu problema <span className="diagnostic-highlight">no es tu apariencia...</span>
           </h1>
           <p className="diagnostic-text">
-            O verdadeiro motivo de você travar, ser ignorado ou tomar vácuo tem a ver com um erro invisível de <strong>comunicação de alto valor</strong> que você comete sem perceber.
+            La verdadera razón por la que te quedas en blanco, te ignoran o te dejan en visto tiene que ver con un error invisible de <strong>comunicación de alto valor</strong> que cometes sin darte cuenta.
           </p>
           <p className="diagnostic-text" style={{ fontSize: '1rem' }}>
-            Nós mapeamos exatamente onde você está errando. A boa notícia é que isso é simples de consertar (mesmo se você for o cara mais introvertido do mundo).
+            Hemos mapeado exactamente en qué te estás equivocando. La buena noticia es que esto es fácil de arreglar (incluso si eres el tipo más introvertido del mundo).
           </p>
           <button onClick={() => navigate('/vsl')} className="cta-button">
-            Ver como resolver isso agora <ArrowRight size={20} />
+            Ver cómo resolverlo ahora <ArrowRight size={20} />
           </button>
         </div>
       </div>
@@ -113,7 +113,7 @@ export default function Quiz() {
   if (isTransitioning) {
     return (
       <div className="quiz-container">
-        <div className="transition-text">Última pergunta...</div>
+        <div className="transition-text">Última pregunta...</div>
       </div>
     );
   }
