@@ -8,7 +8,7 @@ export default function VSL() {
 
   useEffect(() => {
     const s = document.createElement("script");
-    s.src = "https://scripts.converteai.net/7f6a95c8-9d58-4683-95f9-5644ba159913/players/69d42045ba8431ee2bd74898/v4/player.js";
+    s.src = "https://scripts.converteai.net/7f6a95c8-9d58-4683-95f9-5644ba159913/players/69d58fb384e8b7c7228550d4/v4/player.js";
     s.async = true;
     document.head.appendChild(s);
   }, []);
@@ -55,7 +55,7 @@ export default function VSL() {
         </h1>
 
         <div className="video-container">
-          <vturb-smartplayer id="vid-69d42045ba8431ee2bd74898" style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: '400px' }}></vturb-smartplayer>
+          <vturb-smartplayer id="vid-69d58fb384e8b7c7228550d4" style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: '400px' }}></vturb-smartplayer>
         </div>
 
         {showPitch && (
